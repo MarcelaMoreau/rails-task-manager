@@ -1,0 +1,11 @@
+<h1> <%= @singletask.title %> </h1>
+
+    <h2> <%= @singletask.details%> </h2>
+<h3> <%= link_to "Back to list", root_path %> </h3>
+<br>
+<%= link_to "Edit", edit_task_path(@singletask) %>
+<br>
+<%= link_to "Delete",
+  task_path(@singletask),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
